@@ -1,49 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>INICIO</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      padding: 40px;
-      background-color: #0f0505;
-      font-family: Arial, sans-serif;
-    }
-    .menu {
-      max-width: 500px;
-      margin: auto;
-    }
-    .menu h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .menu a {
-      display: block;
-      padding: 15px;
-      margin: 10px 0;
-      background-color: #da58c4;
-      color: rgb(211, 37, 37);
-      text-decoration: none;
-      text-align: center;
-      border-radius: 5px;
-    }
-    .menu a:hover {
-      background-color: #cad61c;
-    }
-    
-  </style>
+    <meta charset="utf-8">
+    <title>CRUD demo js</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="menu">
-    <h1>Menú de Páginas</h1>
-    <h2>Jose Leonardo Balam Hoil
-        408 info</h2>
-    <a href="./pagina web 1/pag 1/index.html">Página web 1 - pagina 2</a>
-    <a href="./pagina web 2/pagina2/index.html">Página 2 - Página 3</a>
-    <a href="./pagina web 3/index.html">Página 3 - Página 4</a>
-    <a href="./pagina web 4/PAGINA WEB DESDE CERO/index.html">Pagina 4 - pagina 5</a>
-    <a href="./pagina web 5/crud-js-localStorage-master/index.html">pagina 5</a>
-  </div>
+
+<body class="container">
+    <div class="mensaje-alerta">
+    </div>
+
+    <div class="jumbotron row">
+        <section>Alumno: Jose Leonardo Balam Hoil</section>
+        <section>Grupo: INFO 408</section>
+        <h2> Registro de Trabajadores <small>Gestión de trabajadores</small></h2>
+        
+
+        <div class="col-md-6">
+            <hr>
+            <p class="modo"> <span class="glyphicon glyphicon-plus"></span>Agregar trabajador</p>
+            <form id="trabajadores-form">
+                <input class="form-control" type="text" id="nombre" placeholder="Nombre">
+                <input class="form-control" type="email" id="correo" placeholder="Correo del trabajador">
+                <input class="form-control" type="number" id="peso" placeholder="Peso en kg">
+                <input class="form-control" type="date" id="fecha_nacimiento" placeholder="Fecha de nacimiento">
+                
+                
+                <input class="form-control" type="text" id="cargo" placeholder="Cargo del trabajador">
+                <input class="form-control" type="tel" id="telefono" placeholder="Teléfono de contacto">
+
+                <br>
+                <input type="submit" class="btn btn-success" value=" Guardar">
+            </form>
+            <br><br>
+            <div id="numeroTrabajadores">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <img style="width:100%" src="./imagen.jpg" alt="" />
+        </div>
+    </div>
+
+    <br><br>
+    <table class="table" id="dbTrabajadores-list">
+    </table>
+
 </body>
+<a href="../../index.html" class="btn btn-primary">
+  <span class="glyphicon glyphicon-home"></span> Volver al Menú Principal
+</a>
+
+<script type="text/javascript" src="funciones.js"></script>
 </html>
